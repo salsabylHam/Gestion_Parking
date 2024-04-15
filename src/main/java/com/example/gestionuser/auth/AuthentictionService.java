@@ -26,6 +26,21 @@ public class AuthentictionService {
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
 
+
+
+    public long getTotalUserCount() {
+        return repository.count();
+    }
+
+    public long getSimpleUserCount() {
+
+        return repository.countByRole(Role.SimpleClient);
+    }
+
+    public long getSubscribedUserCount() {
+        return repository.countByRole(Role.SubscribedCLient);
+    }
+
     public AuthenticationResponse register(RegisterRequest request) {
         var user = User.builder()
                 .firstname(request.getFirstname())
@@ -58,9 +73,9 @@ public class AuthentictionService {
                 .token(jwtToken)
                 .build();
 
-
-
     }
+
+
 //    private void saveUserToken(User user, String jwtToken) {
 //        var token = Token.builder()
 //                .user(user)

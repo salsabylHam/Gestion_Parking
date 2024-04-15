@@ -13,10 +13,9 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-
-
+import static org.springframework.security.config.Customizer.withDefaults;
 import static org.springframework.security.config.http.SessionCreationPolicy.STATELESS;
-import static org.springframework.http.HttpMethod.*;
+
 
 
 @Configuration
@@ -51,7 +50,7 @@ public class SecurityConfiguration {
                 .csrf(csrf -> csrf.disable())
                 //.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(req ->
-                        req.requestMatchers("/api/v1/auth/**")
+                        req.requestMatchers("/dashboard/user-count")
                                 .permitAll()
                                 .anyRequest()
                                 .authenticated()
