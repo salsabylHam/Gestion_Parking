@@ -1,20 +1,14 @@
 package com.example.gestionuser.auth;
 
 import com.example.gestionuser.config.JwtService;
-import com.example.gestionuser.user.Role;
-import com.example.gestionuser.user.User;
-import com.example.gestionuser.user.UserRepository;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import com.example.gestionuser.entities.Role;
+import com.example.gestionuser.entities.User;
+import com.example.gestionuser.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpHeaders;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import java.io.IOException;
 
 @Service
 @RequiredArgsConstructor

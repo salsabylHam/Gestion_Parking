@@ -1,8 +1,13 @@
 package com.example.gestionuser.auth;
 
+import com.example.gestionuser.entities.Comments;
+import com.example.gestionuser.entities.Poste;
+import com.example.gestionuser.services.IGestionComments;
+import com.example.gestionuser.services.IGestionPoste;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,7 +21,8 @@ import java.io.IOException;
 @RequiredArgsConstructor
 public class AuthenticationController {
     private final AuthentictionService service;
-
+    @Autowired
+    IGestionComments gComments ;
     @PostMapping("/register")
     public ResponseEntity<AuthenticationResponse> register(
             @RequestBody RegisterRequest request
@@ -37,6 +43,9 @@ public class AuthenticationController {
 //    ) throws IOException {
 //        service.refreshToken(request, response);
 //    }
-
+@PostMapping("/addComments")
+public Comments addComments(@RequestBody Comments comments){
+    return gComments.addComment(comments);
+}
 }
 

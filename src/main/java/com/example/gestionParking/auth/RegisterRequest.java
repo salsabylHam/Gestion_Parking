@@ -1,6 +1,5 @@
 package com.example.gestionuser.auth;
 
-import com.example.gestionuser.user.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
