@@ -1,6 +1,6 @@
-package com.example.gestionuser.config;
+package com.example.gestionParking.config;
 
-import com.example.gestionuser.repository.UserRepository;
+import com.example.gestionParking.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

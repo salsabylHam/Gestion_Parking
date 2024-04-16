@@ -1,6 +1,6 @@
-package com.example.gestionuser.services;
+package com.example.gestionParking.services;
 
-import com.example.gestionuser.entities.Poste;
+import com.example.gestionParking.entities.Poste;
 
 import java.util.List;
 

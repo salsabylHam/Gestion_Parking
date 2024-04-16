@@ -1,7 +1,7 @@
-package com.example.gestionuser.controller;
+package com.example.gestionParking.controller;
 
-import com.example.gestionuser.entities.Comments;
-import com.example.gestionuser.services.IGestionComments;
+import com.example.gestionParking.entities.Comments;
+import com.example.gestionParking.services.IGestionComments;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;

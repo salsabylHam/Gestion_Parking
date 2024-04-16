@@ -1,5 +1,5 @@
-package com.example.gestionuser.repository;
-import com.example.gestionuser.entities.User;
+package com.example.gestionParking.repository;
+import com.example.gestionParking.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

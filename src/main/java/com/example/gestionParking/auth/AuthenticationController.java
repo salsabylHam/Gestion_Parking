@@ -1,11 +1,7 @@
-package com.example.gestionuser.auth;
+package com.example.gestionParking.auth;
 
-import com.example.gestionuser.entities.Comments;
-import com.example.gestionuser.entities.Poste;
-import com.example.gestionuser.services.IGestionComments;
-import com.example.gestionuser.services.IGestionPoste;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import com.example.gestionParking.entities.Comments;
+import com.example.gestionParking.services.IGestionComments;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -13,8 +9,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.io.IOException;
 
 @RestController
 @RequestMapping("/api/v1/auth")

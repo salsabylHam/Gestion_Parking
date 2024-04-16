@@ -1,7 +1,6 @@
-package com.example.gestionuser.services;
+package com.example.gestionParking.services;
 
-import com.example.gestionuser.entities.Comments;
-import com.example.gestionuser.entities.Poste;
+import com.example.gestionParking.entities.Comments;
 
 import java.util.List;
 

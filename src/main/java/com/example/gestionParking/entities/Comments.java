@@ -1,4 +1,4 @@
-package com.example.gestionuser.entities;
+package com.example.gestionParking.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

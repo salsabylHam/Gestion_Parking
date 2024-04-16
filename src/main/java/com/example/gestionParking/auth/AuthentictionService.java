@@ -1,9 +1,9 @@
-package com.example.gestionuser.auth;
+package com.example.gestionParking.auth;
 
-import com.example.gestionuser.config.JwtService;
-import com.example.gestionuser.entities.Role;
-import com.example.gestionuser.entities.User;
-import com.example.gestionuser.repository.UserRepository;
+import com.example.gestionParking.config.JwtService;
+import com.example.gestionParking.entities.Role;
+import com.example.gestionParking.entities.User;
+import com.example.gestionParking.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

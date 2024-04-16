@@ -1,4 +1,4 @@
-package com.example.gestionuser.auth;
+package com.example.gestionParking.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

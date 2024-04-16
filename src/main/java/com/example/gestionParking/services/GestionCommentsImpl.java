@@ -1,7 +1,7 @@
-package com.example.gestionuser.services;
+package com.example.gestionParking.services;
 
-import com.example.gestionuser.entities.Comments;
-import com.example.gestionuser.repository.ICommentsRepository;
+import com.example.gestionParking.entities.Comments;
+import com.example.gestionParking.repository.ICommentsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

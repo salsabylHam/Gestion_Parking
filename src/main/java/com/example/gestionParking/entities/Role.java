@@ -1,4 +1,4 @@
-package com.example.gestionuser.entities;
+package com.example.gestionParking.entities;
 
 public enum Role {
     SimpleClient,

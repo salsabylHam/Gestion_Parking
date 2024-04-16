@@ -1,7 +1,7 @@
-package com.example.gestionuser.services;
+package com.example.gestionParking.services;
 
-import com.example.gestionuser.entities.Poste;
-import com.example.gestionuser.repository.IPosteRepository;
+import com.example.gestionParking.entities.Poste;
+import com.example.gestionParking.repository.IPosteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,6 @@
-package com.example.gestionuser.repository;
+package com.example.gestionParking.repository;
 
-import com.example.gestionuser.entities.Comments;
-import com.example.gestionuser.entities.Poste;
+import com.example.gestionParking.entities.Poste;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

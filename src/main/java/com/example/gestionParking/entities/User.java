@@ -1,6 +1,5 @@
-package com.example.gestionuser.entities;
+package com.example.gestionParking.entities;
 
-import com.example.gestionuser.entities.Role;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

@@ -1,7 +1,6 @@
-package com.example.gestionuser.repository;
+package com.example.gestionParking.repository;
 
-import com.example.gestionuser.entities.Comments;
-import jakarta.persistence.OrderBy;
+import com.example.gestionParking.entities.Comments;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
