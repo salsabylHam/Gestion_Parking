@@ -1,4 +1,4 @@
-package com.example.gestionuser;
+package com.example.gestionParking;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

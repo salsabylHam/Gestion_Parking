@@ -1,6 +1,5 @@
-package com.example.gestionuser.auth;
+package com.example.gestionParking.auth;
 
-import com.example.gestionuser.user.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,12 +10,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
-
-public class RegisterRequest {
-    private  String firstname;
-    private String lastname;
+public class AuthenticationRequest {
+    //private String lastname;
     private String email;
-    private String password;
-    //private Role role;
-}
 
+    private String password;
+}

@@ -1,6 +1,6 @@
-package com.example.gestionuser.demo;
+package com.example.gestionParking.controller;
 
-import com.example.gestionuser.auth.AuthentictionService;
+import com.example.gestionParking.auth.AuthentictionService;
 
 
 import org.springframework.http.ResponseEntity;

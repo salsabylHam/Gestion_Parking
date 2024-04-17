@@ -1,20 +1,14 @@
-package com.example.gestionuser.auth;
+package com.example.gestionParking.auth;
 
-import com.example.gestionuser.config.JwtService;
-import com.example.gestionuser.user.Role;
-import com.example.gestionuser.user.User;
-import com.example.gestionuser.user.UserRepository;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import com.example.gestionParking.config.JwtService;
+import com.example.gestionParking.entities.Role;
+import com.example.gestionParking.entities.User;
+import com.example.gestionParking.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpHeaders;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import java.io.IOException;
 
 @Service
 @RequiredArgsConstructor
