@@ -1,11 +1,12 @@
-package com.example.gestionuser.user;
+package com.example.gestionuser.entities;
 
+import com.example.gestionuser.entities.Role;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.boot.autoconfigure.task.TaskExecutionProperties;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -65,4 +66,8 @@ public class User implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+    @Enumerated(EnumType.STRING)
+    @OneToMany(mappedBy = "user")
+    @JsonIgnore
+    private List<Poste> poste;
 }
