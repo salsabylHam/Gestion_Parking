@@ -1,8 +1,7 @@
 package com.example.gestionParking.controller;
 
-import com.example.gestionParking.auth.AuthentictionService;
-
-
+import com.example.gestionParking.repository.IUserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,29 +11,27 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/dashboard")
-public class DashboardController {
+@RequestMapping("/userdashboard")
+public class UserDashboardController {
 
-    private  AuthentictionService authService;
+    private final IUserRepository userRepository;
 
-    public DashboardController(AuthentictionService authService) {
-        this.authService = authService;
+    @Autowired
+    public UserDashboardController(IUserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 
     @GetMapping("/user-count")
     public ResponseEntity<Map<String, Long>> getUserCount() {
-        long totalUsers = authService.getTotalUserCount();
-        long subscribedUsers = authService.getSubscribedUserCount();
-        long simpleUsers = authService.getSimpleUserCount();
-        //long regularUsers = totalUsers - subscribedUsers;
+        long totalUsers = userRepository.getTotalUserCount();
+        long subscribedUsers = userRepository.getSubscribedUserCount();
+        long simpleUsers = userRepository.getSimpleUserCount();
 
         Map<String, Long> counts = new HashMap<>();
         counts.put("totalUsers", totalUsers);
         counts.put("subscribedUsers", subscribedUsers);
         counts.put("simpleUsers", simpleUsers);
-       // counts.put("regularUsers", regularUsers);
 
         return ResponseEntity.ok(counts);
     }
 }
-

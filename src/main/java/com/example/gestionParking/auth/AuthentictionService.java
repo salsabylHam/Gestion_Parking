@@ -3,7 +3,7 @@ package com.example.gestionParking.auth;
 import com.example.gestionParking.config.JwtService;
 import com.example.gestionParking.entities.Role;
 import com.example.gestionParking.entities.User;
-import com.example.gestionParking.repository.UserRepository;
+import com.example.gestionParking.repository.IUserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 
 public class AuthentictionService {
 
-    private final UserRepository repository;
+    private final IUserRepository repository;
     private final PasswordEncoder passwordEncoder;
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
@@ -23,16 +23,16 @@ public class AuthentictionService {
 
 
     public long getTotalUserCount() {
-        return repository.count();
+        return repository.getTotalUserCount();
     }
 
     public long getSimpleUserCount() {
 
-        return repository.countByRole(Role.SimpleClient);
+        return repository.getSimpleUserCount();
     }
 
     public long getSubscribedUserCount() {
-        return repository.countByRole(Role.SubscribedCLient);
+        return repository.getSubscribedUserCount();
     }
 
     public AuthenticationResponse register(RegisterRequest request) {
