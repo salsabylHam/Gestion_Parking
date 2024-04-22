@@ -1,9 +1,7 @@
 package com.example.gestionParking.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,6 +9,7 @@ import lombok.Setter;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 @Getter
@@ -21,8 +20,25 @@ import java.time.LocalDate;
 public class Reservation implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer numRes ;
-    private  LocalDate Durée;
+    private Long idReservation;
+    private int numRes;
+    private Date date;
+    private Date duration;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    @JsonIgnoreProperties("reservations")
+    private User user;
+
+    @ManyToOne
+    @JoinColumn(name = "parking_spot_id")
+    @JsonIgnoreProperties("reservations")
+    private ParkingSpot parkingSpot;
+
+
+    @OneToOne(mappedBy = "reservation")
+    @JsonIgnoreProperties("reservations")
+    private Ticket ticket;
 
 
 }
